@@ -14,10 +14,10 @@ import matplotlib
 
 matplotlib.use("Agg")  # headless backend for CI
 
-import matplotlib.pyplot as plt  # noqa: E402
+import matplotlib.pyplot as plt
 
-from phantom_pinpoint.simulation import run_condition  # noqa: E402
-from phantom_pinpoint.visualization import (  # noqa: E402
+from phantom_pinpoint.simulation import run_condition
+from phantom_pinpoint.visualization import (
     plot_ablation_heatmap,
     plot_audience_response,
     plot_claim_geometry,
