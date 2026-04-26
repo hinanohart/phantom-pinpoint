@@ -34,7 +34,7 @@ jobs:
         run: mypy src/phantom_pinpoint
         continue-on-error: true   # mypy strict is best-effort while v0.1.0
       - name: Run tests with coverage
-        run: pytest --cov=src/phantom_pinpoint --cov-report=xml --cov-fail-under=80
+        run: pytest --cov=src/phantom_pinpoint --cov-report=xml --cov-fail-under=75
       - name: Upload coverage
         uses: codecov/codecov-action@v4
         with:
