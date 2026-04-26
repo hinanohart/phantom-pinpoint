@@ -12,7 +12,7 @@ import os
 import platform
 import subprocess
 import sys
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
@@ -46,7 +46,7 @@ def write_manifest(name: str, payload: dict[str, Any]) -> None:
         "git_commit": _git_commit(),
         "python": sys.version.split()[0],
         "platform": platform.platform(),
-        "timestamp_utc": datetime.now(timezone.utc).isoformat(),
+        "timestamp_utc": datetime.now(UTC).isoformat(),
         **payload,
     }
     tmp = target.with_suffix(target.suffix + ".tmp")

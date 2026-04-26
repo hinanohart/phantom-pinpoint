@@ -11,8 +11,8 @@ agent's full trajectory.
 from __future__ import annotations
 
 from collections import deque
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Iterable
 
 import numpy as np
 from numpy.typing import NDArray

@@ -17,6 +17,12 @@ import sys
 
 import numpy as np
 
+from experiments._common import (
+    FIGURES_DIR,
+    ensure_dirs,
+    write_manifest,
+    write_parquet,
+)
 from phantom_pinpoint.ablations import ABLATIONS, ablation_grid
 from phantom_pinpoint.statistics import (
     benjamini_hochberg,
@@ -24,13 +30,6 @@ from phantom_pinpoint.statistics import (
     permutation_test,
 )
 from phantom_pinpoint.visualization import plot_ablation_heatmap, save_figure
-
-from experiments._common import (
-    FIGURES_DIR,
-    ensure_dirs,
-    write_manifest,
-    write_parquet,
-)
 
 
 def main(n_runs: int = 1000, seed: int = 42) -> int:

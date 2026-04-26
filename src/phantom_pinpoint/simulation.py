@@ -151,7 +151,7 @@ def parameter_sweep(
     frames: list[pd.DataFrame] = []
     for combo in grids:
         kwargs = dict(base_kwargs)
-        kwargs.update({k: v for k, v in zip(keys, combo, strict=True)})
+        kwargs.update(dict(zip(keys, combo, strict=True)))
         name = "_".join(f"{k}={v}" for k, v in zip(keys, combo, strict=True))
         df = run_condition(name, n_runs=n_runs, seed=seed, **kwargs)
         for k, v in zip(keys, combo, strict=True):
