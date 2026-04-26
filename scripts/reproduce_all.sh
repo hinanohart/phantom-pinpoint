@@ -17,7 +17,8 @@ mkdir -p results figures
 echo "[reproduce_all] running pytest"
 pytest -q
 
-for exp in 01_baseline 02_audience_effect 03_vague_vs_sharp 04_ablations 05_repeated_trigger; do
+for exp in 01_baseline 02_audience_effect 03_vague_vs_sharp 04_ablations 05_repeated_trigger \
+           06_sensitivity_sweep 07_identifiability 09_location_decomposition 10_effect_sizes; do
     echo "[reproduce_all] running experiments/${exp}"
     python -m "experiments.${exp}"
 done

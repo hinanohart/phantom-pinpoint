@@ -43,23 +43,65 @@ from phantom_pinpoint.core import (
     strategic_anchor,
     strategic_claim,
 )
+from phantom_pinpoint.decomposition import (
+    DECOMPOSITION_TOLERANCE,
+    DecompositionResult,
+    decompose_delta_pp,
+    decompose_simulation,
+)
+from phantom_pinpoint.effect_size import (
+    EffectSizeCI,
+    bootstrap_effect_size,
+    cliffs_delta,
+    cohens_d,
+    hedges_g,
+)
+from phantom_pinpoint.identifiability import (
+    DegeneracyReport,
+    detect_degeneracy,
+)
+from phantom_pinpoint.identifiability import (
+    assess as assess_identifiability,
+)
+from phantom_pinpoint.sensitivity import (
+    SensitivityCell,
+    elasticity,
+    robustness_check,
+    sensitivity_sweep,
+)
 from phantom_pinpoint.statistics import (
     BootstrapResult,
     bootstrap_ci,
     permutation_test,
 )
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 __all__ = [
+    "DECOMPOSITION_TOLERANCE",
     "BootstrapResult",
+    "DecompositionResult",
+    "DegeneracyReport",
+    "EffectSizeCI",
     "PhantomPinpointModel",
+    "SensitivityCell",
     "SimulationResult",
     "__version__",
+    "assess_identifiability",
     "bayesian_posterior_mean",
     "bootstrap_ci",
+    "bootstrap_effect_size",
+    "cliffs_delta",
+    "cohens_d",
+    "decompose_delta_pp",
+    "decompose_simulation",
+    "detect_degeneracy",
+    "elasticity",
+    "hedges_g",
     "permutation_test",
     "pp_divergence",
     "project_onto_region",
+    "robustness_check",
+    "sensitivity_sweep",
     "strategic_anchor",
     "strategic_claim",
 ]

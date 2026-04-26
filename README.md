@@ -205,8 +205,50 @@ phantom-pinpoint/
 MIT.  Contributions, replications, and human-subjects validations welcome
 — please open an issue or PR.
 
+## What's new in v0.2.0 — ΔPP decomposition
+
+The v0.1.0 Δ\_PP signature was dominated by *location* mismatch and
+therefore failed to detect audience-driven sharpening (H2b).  v0.2.0
+adds the **closed-form decomposition**
+
+\[
+\Delta_{PP}\;=\;
+\underbrace{\tfrac{d}{2}\log\!\Bigl(\tfrac{\sigma_{\text{post}}^{2}}{\sigma_{conf}^{2}}\Bigr)}_{\Delta_{PP}^{\text{width}}}
+\;+\;
+\underbrace{\tfrac12\Bigl(\tfrac{\|p^{*}-\mu_{\text{post}}\|^{2}}{\sigma_{\text{post}}^{2}}-\tfrac{\|p^{*}-\text{anchor}\|^{2}}{\sigma_{conf}^{2}}\Bigr)}_{\Delta_{PP}^{\text{loc}}}.
+\]
+
+The width component recovers the audience-driven prediction that v0.1.0
+missed — Spearman ρ = +1.0, p = 1.4 × 10⁻²⁴ (H9 PASS).  The location
+component analytically explains v0.1.0's H6 sign reversal (H10 PASS).
+
+![Fig 9 — audience decomposition](docs/figures/fig09_audience_decomposition.png)
+
+### v0.2.0 acceptance criteria
+
+| ID  | Criterion                                                              | Status |
+|-----|------------------------------------------------------------------------|--------|
+| AC8 | width + location identity holds within 1e-9, H9/H10 PASS               | ✅ PASS |
+| AC9 | identifiability degeneracy diagnostic                                   | ❌ FAIL (honest, see preregistration §"Honest failures") |
+| AC10| ±50 % univariate sweep preserves sign in ≥ 90 % of cells               | ✅ PASS (100 %) |
+| AC11| every primary contrast reports Cohen's *d* + bootstrap 95 % CI         | ✅ PASS |
+| AC12| ρ-only reporting forbidden                                             | ✅ ENFORCED |
+
+```python
+from phantom_pinpoint import (
+    PhantomPinpointModel, decompose_simulation, bootstrap_effect_size,
+)
+
+model = PhantomPinpointModel(audience_size=4.0)
+result = model.simulate(n_runs=1000, seed=42)
+# decomposition needs prior_means + betas — see experiments/09_*.py
+```
+
 ## Status
 
-`v0.1.0` (2026-04-27).  AC1, AC2, AC4, AC5, AC6 pass.  AC3 partial (4/6
-pre-registered hypotheses pass, 2 failures honestly reported).  AC7
-sensitivity sweep deferred to v0.2.0.
+`v0.2.0` (2026-04-27).  AC1, AC2, AC4, AC5, AC6, AC8, AC10, AC11, AC12
+pass.  AC9 (geometric identifiability diagnostic) honestly fails — the
+geometric degeneracy region does not align with the statistical
+un-identifiability region; v0.3.0 will sharpen with a Mahalanobis
+variant.  See [`CHANGELOG.md`](CHANGELOG.md) and
+[`docs/preregistration.md`](docs/preregistration.md) for the full record.

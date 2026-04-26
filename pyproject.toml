@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "phantom-pinpoint"
-version = "0.1.0"
+version = "0.2.0"
 description = "Agent-based simulation of the Phantom Pinpoint Effect: post-hoc specificity confabulation when an abstract goal region is grazed by a trigger."
 readme = "README.md"
 requires-python = ">=3.11"
