@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below."
+title: "Phantom Pinpoint: Agent-Based Simulation of Post-hoc Specificity Confabulation"
+version: 0.1.0
+date-released: 2026-04-27
+authors:
+  - family-names: hinanohart
+    given-names: ""
+    email: 255530825+hinanohart@users.noreply.github.com
+license: MIT
+repository-code: "https://github.com/hinanohart/phantom-pinpoint"
+keywords:
+  - cognitive-science
+  - agent-based-model
+  - confabulation
+  - hindsight-bias
+  - signaling
+abstract: >-
+  An agent-based and analytical simulation of the Phantom Pinpoint (PP) Effect:
+  the cognitive phenomenon in which a subject who holds an abstract goal region
+  G ⊂ Θ retroactively claims to have been targeting a specific point p* ∈ G the
+  moment an external trigger E touches G — combining Texas Sharpshooter
+  Fallacy, hindsight bias, confabulation, and audience-driven cheap talk
+  signaling into a single identifiable signature.
+preferred-citation:
+  type: software
+  title: "Phantom Pinpoint: Agent-Based Simulation of Post-hoc Specificity Confabulation"
+  authors:
+    - family-names: hinanohart
+      given-names: ""
+  version: 0.1.0
+  year: 2026
+  url: "https://github.com/hinanohart/phantom-pinpoint"
