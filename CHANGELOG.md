@@ -4,6 +4,22 @@ All notable changes to this project are documented in this file.  The
 format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and the project adheres to [Semantic Versioning](https://semver.org/).
 
+## [Unreleased]
+
+### Documentation
+
+* README "Repository layout" updated to reflect the v0.2.0 module
+  surface (`decomposition`, `effect_size`, `sensitivity`,
+  `identifiability`) and the four new experiments (06, 07, 09, 10).
+* README "Pre-registered failures" cross-references the v0.2.0
+  decomposition that analytically explains the v0.1.0 H2b/H6
+  failures, instead of stating that a corrected H6′ "will" be
+  pre-registered (it already was).
+* README BibTeX `version` bumped to `0.2.0` and the documentation
+  bullet now points at H1–H10 + F1–F5 across both confirmatory
+  families instead of the v0.1.0-era H1–H6 phrasing.
+* No code, results, or hypothesis outcomes change.
+
 ## [0.2.0] – 2026-04-27
 
 ### Added

@@ -132,7 +132,11 @@ collection.  Two failed and we report both:
   (near the trigger) diverge *more*.  This is consistent with the PP
   framework but contradicts the naive intuition.
 
-We pre-register a corrected H6′ for v0.2.0.
+Both failures are now **explained analytically** by the v0.2.0 ΔPP
+decomposition (see "What's new in v0.2.0" below): H2b's audience signal
+lives entirely in \(\Delta_{PP}^{\text{width}}\) (H9 PASS, ρ=+1.0,
+p=1.4×10⁻²⁴) and H6's sign reversal is fully captured by the
+\(\Delta_{PP}^{\text{loc}}\) term (H10 PASS).
 
 ## Trigger → claim geometry
 
@@ -146,8 +150,10 @@ external triggers onto \(\partial G\).
 ## Documentation
 
 * [`docs/theory.md`](docs/theory.md) — full mathematical derivation
-* [`docs/preregistration.md`](docs/preregistration.md) — pre-registered H1–H6
-  + falsification criteria + honest-failure record
+* [`docs/preregistration.md`](docs/preregistration.md) — pre-registered
+  H1–H10 across confirmatory families C1 (v0.1.0) and C2 (v0.2.0),
+  falsification criteria F1–F5, and the full honest-failure record
+* [`CHANGELOG.md`](CHANGELOG.md) — Keep a Changelog 1.1.0 release notes
 * [`docs/examples.md`](docs/examples.md) — anecdote inventory ("homework
   excuse", politician, trader, "あざと可愛い", sibling fight, SNS 匂わせ,
   sports commentary)
@@ -162,16 +168,25 @@ phantom-pinpoint/
 │   ├── simulation.py          # run_condition / run_grid / parameter_sweep
 │   ├── statistics.py          # bootstrap_ci / permutation_test / BH-FDR
 │   ├── ablations.py           # A1–A7 pre-registered grid
-│   ├── visualization.py       # 4 figures, atomic save
+│   ├── decomposition.py       # ΔPP = ΔPP_width + ΔPP_loc closed-form (v0.2.0)
+│   ├── effect_size.py         # Cohen d / Hedges g / Cliff δ + bootstrap (v0.2.0)
+│   ├── sensitivity.py         # ±50 % univariate sweep, AC10 gate (v0.2.0)
+│   ├── identifiability.py     # geometric degeneracy diagnostic, AC9 (v0.2.0)
+│   ├── visualization.py       # 6 figures, atomic save
 │   └── cli.py                 # typer-based CLI
-├── tests/                     # pytest, 48 tests, ≥80 % coverage
-├── experiments/               # 5 reproducible scripts
+├── tests/                     # pytest, 110+ tests, ≥75 % coverage gate (92 % actual)
+├── experiments/               # 9 reproducible scripts (01–05 v0.1.0, 06/07/09/10 v0.2.0)
 │   ├── 01_baseline.py
 │   ├── 02_audience_effect.py
 │   ├── 03_vague_vs_sharp.py
 │   ├── 04_ablations.py
-│   └── 05_repeated_trigger.py
+│   ├── 05_repeated_trigger.py
+│   ├── 06_sensitivity_sweep.py    # AC10
+│   ├── 07_identifiability.py      # AC9
+│   ├── 09_location_decomposition.py  # H2b/H6 root-cause via decomposition
+│   └── 10_effect_sizes.py         # AC11/AC12 effect-size sheet
 ├── docs/                      # theory / preregistration / examples / figures
+├── CHANGELOG.md               # Keep a Changelog 1.1.0
 ├── scripts/reproduce_all.sh
 ├── pyproject.toml             # hatchling, py>=3.11
 └── LICENSE                    # MIT
@@ -194,7 +209,7 @@ phantom-pinpoint/
   author  = {hinanohart},
   title   = {{Phantom Pinpoint: Agent-Based Simulation of Post-hoc Specificity Confabulation}},
   year    = {2026},
-  version = {0.1.0},
+  version = {0.2.0},
   url     = {https://github.com/hinanohart/phantom-pinpoint},
   license = {MIT}
 }
