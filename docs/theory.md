@@ -7,7 +7,7 @@ example, the diffuse intent "I should do my homework sometime today".  When
 an external trigger \(E_t\) (a parent walking in, a politician's question, a
 market move) happens to **graze** \(G\), \(S\) retroactively claims to have
 been targeting a *specific* point \(p^* \in G\) all along
-("I was *just* about to start, mom!").
+(parent: "Did you do your homework?" — child: "I was *just* about to start, mom!").
 
 The signature is the conjunction of four sub-phenomena:
 

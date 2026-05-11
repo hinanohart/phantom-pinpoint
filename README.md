@@ -4,7 +4,10 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/downloads/)
 
-> *"I was *just* about to do my homework, mom!"* — Phantom Pinpoint Effect, English translation.
+> **Parent:** "Did you do your homework?"
+> **Child:** "I was **just** about to do my homework, mom!"
+>
+> — Phantom Pinpoint Effect, canonical anecdote (English translation).
 
 ## What is the Phantom Pinpoint (PP) Effect?
 
