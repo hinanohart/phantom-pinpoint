@@ -8,6 +8,9 @@ content of the model transparent.
 
 ## 1. 「今宿題やろうと思ってたのにママ」("I was just about to do my homework, mom!")
 
+> **Parent:** "Did you do your homework?"
+> **Child:** "I was *just* about to do my homework, mom!"
+
 * **Subject \(S\)** — child.
 * **\(G\)** — diffuse "I should do my homework today" intent (large \(r_G\)).
 * **Trigger \(E\)** — mother walks in.

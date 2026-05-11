@@ -5,8 +5,8 @@ subject who holds an *abstract* goal region :math:`G \\subset \\Theta` claims �
 the moment an external trigger :math:`E` happens to graze :math:`G` — that they
 were targeting a *specific* point :math:`p^* \\in G` all along.  Examples
 include the canonical Japanese excuse 「今宿題やろうと思ってたのにママ」
-("I was just about to do my homework, mom!") and politicians' retroactive
-"this was anticipated" claims.
+(parent: "Did you do your homework?" — child: "I was just about to do my
+homework, mom!") and politicians' retroactive "this was anticipated" claims.
 
 This package provides:
 
