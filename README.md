@@ -1,7 +1,7 @@
 # phantom-pinpoint
 
 [![CI](https://github.com/hinanohart/phantom-pinpoint/actions/workflows/ci.yml/badge.svg)](https://github.com/hinanohart/phantom-pinpoint/actions/workflows/ci.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/downloads/)
 
 > **Parent:** "Did you do your homework?"
@@ -26,7 +26,7 @@ PP is the **identifiable conjunction** of:
 3. Confabulation — sharpness fabricated post-hoc.
 4. Audience-driven cheap-talk — claim sharpness scales with \(\gamma\).
 
-`phantom-pinpoint` is a fully-typed, MIT-licensed numpy implementation
+`phantom-pinpoint` is a fully-typed, Apache-2.0-licensed numpy implementation
 that simulates PP, supplies a clean **negative control** ablation, and
 ships pre-registered hypotheses with bootstrap confidence intervals.
 
