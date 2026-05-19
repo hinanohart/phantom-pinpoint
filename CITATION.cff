@@ -7,7 +7,7 @@ authors:
   - family-names: hinanohart
     given-names: ""
     email: 255530825+hinanohart@users.noreply.github.com
-license: Apache-2.0
+license: MIT
 repository-code: "https://github.com/hinanohart/phantom-pinpoint"
 keywords:
   - cognitive-science
